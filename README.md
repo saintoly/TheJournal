@@ -1,0 +1,2 @@
+# TheJournal
+Ola's Project
