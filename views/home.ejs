@@ -3,6 +3,38 @@ Takes: articles = [blogpostObjs]
 Outputs: it will have a list of articles
 each article can have a button to show
 each article can have a button to go back
-each article van have a button to update
-each article van have a button to delete
+each article can have a button to update
+each article can have a button to delete
  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>articles app</title>
+  </head>
+  <body>
+
+		<a href="/create/"><button>Add an Article!</button></a>
+
+		<% articles.forEach( article => { %>
+			<ul>
+				<li> <%= article.tittle %></li>
+				<li> <%= article.content %></li>
+				<li> <%= article.author %></li>
+				<li> <%= article.date %></li>
+				<li><a href="/show/<%= article.id %>"><button>View articles</button></a></li>
+				<li><a href="/update/<%= article.id %>"><button>Update Article</button></a></li>
+				<li>
+					<form action="/delete/<%= article.id %>" method="POST">
+						<input type="submit" value="Delete Article">
+					</form>
+				</li>
+			</ul>
+		<% }) %>
+	</div>
+
+
+ </body>
+</html>

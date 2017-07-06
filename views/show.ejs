@@ -5,3 +5,32 @@ update: popup with submit form to /blogs/:id/update, update redirects to show
 delete: popup with confirmation to delete => /blog/:id => /home
 back to home.ejs: /home 
  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>Articles app</title>
+  </head>
+  <body>
+
+
+<div class="container">
+  <header class="jumbotron"><h1>VIEW ARTICLES IN YOUR COMMUNITIES</h1></header>
+
+    <h4> <%= article.id %> </h4>
+	<h1><%= article.tittle %></h1>
+	<h4> <%= article.content %></h4>
+	<h4> <%= article.author %></h4>
+	<h4> <%= article.date %></h4>
+
+	<a href="/update/<%= article.id %>"><button>Update Article</button></a>
+	<form action="/delete/<%= article.id %>" method="POST">
+		<input type="submit" value="Delete Article">
+		</form>
+	
+ 	<p><a href="/"><button>Back to Articles</button></a></p>
+  </div>

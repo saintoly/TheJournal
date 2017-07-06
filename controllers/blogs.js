@@ -10,3 +10,5 @@
 //Read specific record: route: /blogs/:id => /show/:id
 //Update update specific record: /blogs/:id => /show/:id
 //Delete specific record: route: /blogs/:id => /home
+
+

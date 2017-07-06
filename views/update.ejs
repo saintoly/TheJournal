@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <title>articles app</title>
+  </head>
+  <body>
+
+
+ <div class="container">
+  <header class="jumbotron"><h1>UPDATE YOUR CHOICE OF ARTICLE</h1></header>
+
+
+	<form action="/update/<%= article.id %>" method="POST">
+	  <input type="text" name="article" value="<%= article.tittle %>">
+		<input type="text" name="content" value="<%= article.content %>">
+		<input type="text" name="author" value="<%= article.author %>">
+		<input type="text" name="date" value="<%= article.date %>">
+		<input type="submit" value="submit update">
+	</form>
+
+ </div>
+
+  </body>
+</html>
